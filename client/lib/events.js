@@ -14,9 +14,9 @@ Template.body.events({
   "change .hide-completed input": function(event) {
     Session.set("hideCompleted", event.target.checked);
   }
-  });
+});
 
-  Template.task.events({
+Template.task.events({
   "click .toggle-checked": function() {
     Meteor.call("setChecked", this._id, !this.checked);
   },
